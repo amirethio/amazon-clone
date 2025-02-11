@@ -1,0 +1,35 @@
+.lower_container{
+background-color: #232f3e;
+color: white;
+height: 40px;
+overflow: hidden;
+}
+.lower_container ul{
+    display: flex;
+    gap: 10px;
+}
+.lower_container li{
+    list-style-type: none;
+    padding: 8px;
+}
+.lower_container li:hover{
+    display: flex;
+    gap: 2px;
+    align-items: center;
+    border: 1px white solid;
+    
+}
+.menuall{
+    display: flex;
+}
+.lower_container li:nth-child(2),
+.lower_container li:nth-child(3) {
+ display: none;
+}
+
+@media(min-width:578px){
+.lower_container li:nth-child(2),
+.lower_container li:nth-child(3) {
+ display: block;
+}
+}
