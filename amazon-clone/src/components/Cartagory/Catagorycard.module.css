@@ -1,0 +1,52 @@
+/* CATAGORY STYLING SECTION */
+.Catagory_wrapper {
+  /* margin-top: -15vh; */
+position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  overflow: hidden;
+  bottom: 50vh;
+
+}
+
+.Catagory_wrapper p {
+  font-size: 12px;
+  font-weight: bold;
+  color: rgb(9, 132, 209);
+}
+.title {
+  max-height: 54.6px;
+}
+
+.card {
+  width: 350px;
+  height: 350px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.card img {
+  width: 100%;
+  object-fit: contain;
+  max-height: 250px;
+  pad: 0 10px;
+}
+.card a {
+  text-decoration: none;
+  color: rgb(35, 23, 35);
+}
+.card h3,
+.card p {
+  padding: 5px;
+  margin-left: 20px;
+  font-size: 21px !important;
+  line-height: 27.3px !important;
+  font-weight: 700;
+}
+.card p {
+  font-size: 12px;
+  font-weight: bold;
+  color: rgb(100, 32, 209);
+}
