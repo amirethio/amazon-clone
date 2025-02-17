@@ -1,9 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import Header from './components/Header/Header'
-import CarouselEffect from './components/Carousel/Carousel'
-import Catagory from "./components/Cartagory/Catagory"
-import Product from './components/Product/Product'
+import Routing from './Pages/Router'
 
 
 function App() {
@@ -11,10 +8,7 @@ function App() {
 
   return (
     <>
-      <Header/>
-      <CarouselEffect/>
-      <Catagory/>
-      <Product/>
+    <Routing/>
     </>
   )
 }

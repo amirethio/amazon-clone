@@ -2,12 +2,13 @@
   display: flex;
   flex-shrink: 0;
   flex-wrap: wrap;
-  margin-top: -290px;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   justify-content: space-around;
   max-width: 1450px;
+  margin: 65px auto 0;
 
-    /* display: flex;
+  /* 
+    display: flex;
     flex-shrink: 0;
     flex-wrap: wrap;
     margin-top: -290px;
@@ -15,7 +16,8 @@
     justify-content: space-around;
     max-width: 1450px;
     max-width: 90%;
-    margin: 0 auto; */
+    margin: 0 auto; 
+  */
 }
 
 .card img {
@@ -29,19 +31,18 @@
   box-shadow: 0 0 10px #0003;
   padding: 10px;
   position: relative;
+  margin: 5px 0;
 }
 .rating {
   display: flex;
   padding: 10px 0px;
 }
+.rating p {
+  padding: 5px 0 0 5px;
+}
 
 .product_content {
   margin-left: 15px;
-}
-@media (min-width: 620px) {
-  .card {
-    max-width: 300px;
-  }
 }
 
 /* button */
@@ -71,6 +72,6 @@
 @media (min-width: 970px) {
   .all_card {
     max-width: 90%;
-    margin: 0 auto;
+    margin: 65 auto;
   }
 }

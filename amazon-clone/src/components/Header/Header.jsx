@@ -5,6 +5,7 @@ import us from "./../../assets/united-states.png";
 import styles from "./header.module.css";
 import Lowerheader from "../Lowerheader/Lowerheader";
 import { MdAccountBox } from "react-icons/md";
+import { Link } from "react-router-dom";
 function Header() {
   return (
     <>
@@ -13,12 +14,12 @@ function Header() {
           {/* header left  */}
           <div className={styles.header_container_left}>
             <span className={styles.amazon_logo}>
-              <a href="#">
+              <Link to="/" className={styles.link}>
                 <img
                   src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
                   alt="azazon"
                 />
-              </a>
+              </Link>
             </span>
             {/* delivered to .. */}
             <span className={styles.header_deliver}>
@@ -28,13 +29,13 @@ function Header() {
                 <p>Ethopian</p>
               </span>
               {/* mobile cart and sccount */}
-              <a href="# " className={styles.mobile_account}>
+              <Link to="# " className={styles.mobile_account}>
                 <MdAccountBox />
-              </a>
-              <a to="/Cart" className={styles.cart}>
+              </Link>
+              <Link to="/Cart" className={styles.cart}>
                 <FiShoppingCart />
                 <span>0</span>
-              </a>
+              </Link>
             </span>
           </div>
           {/* header center  */}
@@ -52,28 +53,28 @@ function Header() {
           {/* heaer right*/}
           <div className={styles.header_container_right}>
             {/* language */}
-            <a>
+            <Link className={styles.link}>
               <img src={us} alt="" />
               <select name="" id="">
                 <option value="">EN</option>
               </select>
-            </a>
+            </Link>
 
             {/* sign in */}
-            <a>
+            <Link to="/auth" className={styles.link}>
               <p>Hello, sign in</p>
               <p>Account & Lists</p>
-            </a>
+            </Link>
             {/* order */}
-            <a>
+            <Link to="/orders" className={styles.link}>
               <p>Returns</p>
               <p>& Orders</p>
-            </a>
+            </Link>
             {/* cart */}
-            <a to="/Cart" className={styles.cart}>
+            <Link to="/cart" className={`${styles.cart} ${styles.link}`}>
               <FiShoppingCart />
               <span>0</span>
-            </a>
+            </Link>
           </div>
         </span>
       </div>

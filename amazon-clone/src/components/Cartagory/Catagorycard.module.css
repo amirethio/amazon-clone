@@ -1,6 +1,6 @@
 /* CATAGORY STYLING SECTION */
 .Catagory_wrapper {
-  /* margin-top: -15vh; */
+     margin-top: -325px;
 position: relative;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -8,10 +8,19 @@ position: relative;
   justify-content: space-between;
   gap: 15px;
   overflow: hidden;
-  bottom: 50vh;
-
+  /* bottom: -150px; */
+  /* bottom: 50vh; */
 }
 
+/*
+
+
+.outer_catagoty{
+  position: relative;
+  height: 100%;
+  
+} 
+  */
 .Catagory_wrapper p {
   font-size: 12px;
   font-weight: bold;

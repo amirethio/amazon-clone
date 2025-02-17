@@ -6,24 +6,26 @@ import css from "./carousel.module.css";
 function CarouselEffect() {
   return (
     <>
-      <Carousel
-        showThumbs={false}
-        autoPlay={true}
-        infiniteLoop={true}
-        showArrows={false}
-        showStatus={false}
-        interval={3000}
-        transitionTime={500}
-        swipeable={true}
-        showIndicators={false}
-      >
-        <div className={css.carousel_img}>
-          {images.map((imgLink, index) => {
-            return <img src={imgLink} alt="" key={index} />;
-          })}
-        </div>
-      </Carousel>
-      <div className={css.hero_img}></div>
+      <div className={css.outer_cara}>
+        <Carousel
+          showThumbs={false}
+          autoPlay={true}
+          infiniteLoop={true}
+          showArrows={false}
+          showStatus={false}
+          interval={3000}
+          transitionTime={500}
+          swipeable={true}
+          showIndicators={false}
+        >
+          {images.map((imgLink, index) => (
+            <div key={index} className={css.carousel_img}>
+              <img src={imgLink} alt={`Slide ${index}`} />
+            </div>
+          ))}
+        </Carousel>
+        <div className={css.hero_img}></div>
+      </div>
     </>
   );
 }

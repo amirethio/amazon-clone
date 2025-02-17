@@ -23,3 +23,6 @@ position: relative;      /* Ensures proper positioning if needed */
   object-position: center; /* Centers the image within the container */
   display: block; /* Take it out of the normal flow */
 }
+.outer_cara{
+  position: relative;
+}

@@ -1,3 +1,7 @@
+.link {
+  color: white;
+  text-decoration: none;
+}
 /* HEADER LEFT PART */
 .header_container img {
   max-width: 100%;
@@ -168,16 +172,16 @@
     width: 105px;
   }
   .header_deliver p,
-  .header_container_right a {
+  .header_container_right .link {
     font-size: 14px;
     line-height: 15px;
     font-weight: 700;
   }
-  .header_container_right a:nth-child(2) {
+  .header_container_right .link:nth-child(2) {
     width: 115px;
   }
-  .header_container_right a:nth-child(3) {
-    width: 65px;
+  .header_container_right .link:nth-child(3) {
+    width: 67px;
   }
   .header_container_border {
     width: 100%;

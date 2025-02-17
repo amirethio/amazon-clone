@@ -1,10 +1,11 @@
+import { Link } from "react-router-dom";
 import styles from "./Catagorycard.module.css";
 
 function Catagorycard({info}) {
   return (
     <>
       <div className={styles.card}>
-        <a href="">
+        <Link to={`catagory/${info.category}`}>
           <span className={styles.title}>
             <h3>{info.category}</h3>
           </span>
@@ -12,7 +13,7 @@ function Catagorycard({info}) {
             <img src={info.image} alt={info.title} />
           </span>
           <p>see more</p>
-        </a>
+        </Link>
       </div>
     </>
   );

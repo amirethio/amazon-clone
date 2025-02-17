@@ -12,12 +12,11 @@ function Product() {
       .catch((err) => console.log(err));
   }, []);
   return (
-    <>               
+    <>
       <section className={styles.all_card}>
         {product?.map((singleProduct) => (
           <ProductCard key={singleProduct.id} data={singleProduct} />
-        ))} 
-        {console.log(product)}
+        ))}
       </section>
     </>
   );
