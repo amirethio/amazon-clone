@@ -1,6 +1,14 @@
 .link {
   color: white;
   text-decoration: none;
+  height: 100%;
+  align-content: center;
+  display: block;
+}
+.fixed{
+  position: sticky;
+  top: 0;
+  z-index: 20;
 }
 /* HEADER LEFT PART */
 .header_container img {
@@ -134,7 +142,7 @@
 /* meadia quarie  */
 
 @media (min-width: 578px) {
-  .header_container img:hover,
+  .header_container a:hover,
   .header_deliver:hover,
   .header_container_right a:hover {
     border: 1px solid white;

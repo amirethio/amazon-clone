@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Landing from "./Landing/landing";
+import Landing from "./Landing/Landing";
 import SignUp from "./Auth/SignUp";
 import Payment from "./Payment/Payment";
 import Orders from "./Orders/Orders";
