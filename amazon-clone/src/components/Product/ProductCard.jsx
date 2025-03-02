@@ -1,18 +1,43 @@
 import StarRatings from "react-star-ratings";
-import styles from "./Product.module.css"
+import styles from "./Product.module.css";
 import { Link } from "react-router-dom";
 import CurrencyFormat from "../CurrencyFormat/CurrencyFormat";
+import { useContext, useState } from "react";
+import { DataContext } from "../DataProvider/DataProvider";
+import { type } from "../../utility/actiontype";
+function ProductCard({ data, des, cart = true }) {
 
-function ProductCard({ data }) {
-  const {image ,title,rating ,price,id} = data
+  const { image, title, rating, price, id, description } = data;
+  const [state, dispatch] = useContext(DataContext);
+  const addToCart = () => {
+    dispatch(
+      {
+      type: type.ADD_TO_BASKET,
+      item: {
+        id,
+        image,
+        title,
+        rating,
+        price,
+        description,
+      },
+    });
+  };
+
   return (
     <>
-      <div className={styles.card}>
-        <Link to={`/product/${id}`}>
+      <div className={` ${des ? styles.detail : styles.card}`}>
+        <Link to={`/product/${id}`} className={styles.card_img_link}>
           <img src={image} alt="" />
         </Link>
         <div className={styles.product_content}>
           <h3>{title}</h3>
+          {/* description */}
+          {des && (
+            <div className={styles.product_des}>
+              <p>{description}</p>
+            </div>
+          )}
           {/* rating and rating number*/}
           <div className={styles.rating}>
             <StarRatings
@@ -28,11 +53,8 @@ function ProductCard({ data }) {
             <p>{rating?.count}</p>
           </div>
           <div>
-            <CurrencyFormat>
-              {price}
-            </CurrencyFormat>
-           
-            <button>add to cart</button>
+            <CurrencyFormat>{price}</CurrencyFormat>
+            {cart && <button onClick={addToCart}>add to cart</button>}
           </div>
         </div>
       </div>

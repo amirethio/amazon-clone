@@ -6,9 +6,15 @@ import styles from "./header.module.css";
 import Lowerheader from "../Lowerheader/Lowerheader";
 import { MdAccountBox } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { DataContext } from "../DataProvider/DataProvider";
 function Header() {
+  const [{basket} ,{user} ,dispatch] = useContext(DataContext);
+ const totalitem = basket?.reduce((amount, item) => {
+   return item.amount + amount
+ },0);
   return (
-    <>
+    <section className={styles.fixed}>
       <div className={styles.header_container}>
         <span className={styles.inner_header}>
           {/* header left  */}
@@ -34,7 +40,7 @@ function Header() {
               </Link>
               <Link to="/Cart" className={styles.cart}>
                 <FiShoppingCart />
-                <span>0</span>
+                <span>{totalitem}</span>
               </Link>
             </span>
           </div>
@@ -73,13 +79,13 @@ function Header() {
             {/* cart */}
             <Link to="/cart" className={`${styles.cart} ${styles.link}`}>
               <FiShoppingCart />
-              <span>0</span>
+              <span>{totalitem}</span>
             </Link>
           </div>
         </span>
       </div>
       <Lowerheader />
-    </>
+    </section>
   );
 }
 {
