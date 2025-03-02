@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import  { useContext,  } from "react";
-=======
-import React, { useContext, useEffect, useState } from "react";
->>>>>>> 9caef8d59edbde00cdf65585685ddd1e96b05192
 import LayOut from "../../components/LayOut/LayOut";
 import { DataContext } from "../../components/DataProvider/DataProvider";
 import ProductCard from "../../components/Product/ProductCard";

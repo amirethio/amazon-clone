@@ -6,19 +6,12 @@ import { useContext, useState } from "react";
 import { DataContext } from "../DataProvider/DataProvider";
 import { type } from "../../utility/actiontype";
 function ProductCard({ data, des, cart = true }) {
-<<<<<<< HEAD
 
   const { image, title, rating, price, id, description } = data;
   const [state, dispatch] = useContext(DataContext);
   const addToCart = () => {
     dispatch(
       {
-=======
-  const { image, title, rating, price, id, description } = data;
-  const [state, dispatch] = useContext(DataContext);
-  const addToCart = () => {
-    dispatch({
->>>>>>> 9caef8d59edbde00cdf65585685ddd1e96b05192
       type: type.ADD_TO_BASKET,
       item: {
         id,
