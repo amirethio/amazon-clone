@@ -141,7 +141,7 @@
 }
 /* meadia quarie  */
 
-@media (min-width: 578px) {
+@media (min-width: 635px) {
   .header_container a:hover,
   .header_deliver:hover,
   .header_container_right a:hover {
@@ -152,7 +152,7 @@
     overflow: hidden;
   }
   .inner_header {
-    min-width: 800px;
+    /* min-width: 800px; */
     height: 62px;
     display: flex;
     align-items: center;

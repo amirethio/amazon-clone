@@ -8,11 +8,12 @@ import { MdAccountBox } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { DataContext } from "../DataProvider/DataProvider";
+import { auth } from "../../utility/firebase";
 function Header() {
-  const [{basket} ,{user} ,dispatch] = useContext(DataContext);
- const totalitem = basket?.reduce((amount, item) => {
-   return item.amount + amount
- },0);
+  const [{ basket, user }, dispatch] = useContext(DataContext);
+  const totalitem = basket?.reduce((amount, item) => {
+    return item.amount + amount;
+  }, 0);
   return (
     <section className={styles.fixed}>
       <div className={styles.header_container}>
@@ -67,9 +68,18 @@ function Header() {
             </Link>
 
             {/* sign in */}
-            <Link to="/auth" className={styles.link}>
-              <p>Hello, sign in</p>
-              <p>Account & Lists</p>
+            <Link to={!user && "/auth"} className={styles.link}>
+              {user ? (
+                <>
+                  <p>Hello {user?.email?.split("@")[0]}</p>
+                  <span style={{fontSize:"16px"}} onClick={()=>auth.signOut()}> sign Out</span>
+                </>
+              ) : (
+                <>
+                  <p>Hello, sign In</p>
+                  <p>Account & Lists</p>
+                </>
+              )}
             </Link>
             {/* order */}
             <Link to="/orders" className={styles.link}>
