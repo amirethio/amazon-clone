@@ -1,5 +1,9 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Landing from "./Landing/Landing";
+<<<<<<< HEAD
+=======
+import SignUp from "./Auth/SignUp";
+>>>>>>> 9caef8d59edbde00cdf65585685ddd1e96b05192
 import Payment from "./Payment/Payment";
 import Orders from "./Orders/Orders";
 import Cart from "./Cart/Cart";

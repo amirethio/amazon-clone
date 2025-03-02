@@ -1,7 +1,10 @@
 import { type } from "./actiontype";
 export const initialstate = {
   basket: [],
+<<<<<<< HEAD
   user:null
+=======
+>>>>>>> 9caef8d59edbde00cdf65585685ddd1e96b05192
 };
 
 export const reducer = (state, action) => {
@@ -29,6 +32,7 @@ export const reducer = (state, action) => {
       }
     }
     case type.REMOVE_FROM_BASKET:
+<<<<<<< HEAD
       {
         const index = state.basket.findIndex((item) => item.id === action.id);
         let newBasket = [...state.basket];
@@ -50,9 +54,28 @@ export const reducer = (state, action) => {
         user:action.user
 
       }
+=======
+      const index = state.basket.findIndex((item) => item.id === action.id);
+      let newBasket = [...state.basket];
+      if (index >= 0) {
+        if (newBasket[index].amount > 1) {
+          newBasket[index] = {
+            ...newBasket[index],
+            amount: newBasket[index].amount - 1,
+          };
+        } else {
+          newBasket.splice(index, 1);
+        }
+      }
+      return { ...state, basket: newBasket };
+>>>>>>> 9caef8d59edbde00cdf65585685ddd1e96b05192
     default:
       return state;
   }
 };
 
+<<<<<<< HEAD
 
+=======
+// const [state, dispatch] = useReducer(reducer, initialstate )
+>>>>>>> 9caef8d59edbde00cdf65585685ddd1e96b05192

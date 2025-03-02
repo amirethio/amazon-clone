@@ -9,7 +9,11 @@ import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { DataContext } from "../DataProvider/DataProvider";
 function Header() {
+<<<<<<< HEAD
   const [{basket} ,{user} ,dispatch] = useContext(DataContext);
+=======
+  const [{basket} ,dispatch] = useContext(DataContext);
+>>>>>>> 9caef8d59edbde00cdf65585685ddd1e96b05192
  const totalitem = basket?.reduce((amount, item) => {
    return item.amount + amount
  },0);
