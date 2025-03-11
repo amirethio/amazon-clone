@@ -5,13 +5,11 @@ import CurrencyFormat from "../CurrencyFormat/CurrencyFormat";
 import { useContext, useState } from "react";
 import { DataContext } from "../DataProvider/DataProvider";
 import { type } from "../../utility/actiontype";
-function ProductCard({ data, des, cart = true }) {
-
+function ProductCard({ data, des, cart = true, flex }) {
   const { image, title, rating, price, id, description } = data;
   const [state, dispatch] = useContext(DataContext);
   const addToCart = () => {
-    dispatch(
-      {
+    dispatch({
       type: type.ADD_TO_BASKET,
       item: {
         id,
@@ -26,7 +24,7 @@ function ProductCard({ data, des, cart = true }) {
 
   return (
     <>
-      <div className={` ${des ? styles.detail : styles.card}`}>
+      <div className={`${flex && styles.flex} ${des ? styles.detail : styles.card}`}>
         <Link to={`/product/${id}`} className={styles.card_img_link}>
           <img src={image} alt="" />
         </Link>

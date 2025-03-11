@@ -101,7 +101,6 @@
   border: 2px solid #febd69;
 }
 
-
 .header_container_center select {
   border: none;
 }
@@ -142,7 +141,6 @@
 }
 /* meadia quarie  */
 .header_container_right .link {
-
 }
 @media (min-width: 635px) {
   .header_container a:hover,
@@ -186,7 +184,7 @@
     line-height: 15px;
     font-weight: 700;
   }
-    .header_container_right .link:nth-child(1) {
+  .header_container_right .link:nth-child(1) {
     width: 55px;
   }
   .header_container_right .link:nth-child(2) {
@@ -205,5 +203,9 @@
     overflow: hidden;
     align-items: center;
     justify-content: space-between;
+  }
+  .cart span {
+    top: 3px;
+    left: 19px;
   }
 }
