@@ -10,7 +10,7 @@ function Results() {
   const [product, setProduct] = useState([]);
   const [Loade, setLoader] = useState(true);
   const { catagory } = useParams();
-  console.log(catagory);
+  console.log(`${baseUrl}/products/category/${catagory}`);
 
   useEffect(() => {
     axios

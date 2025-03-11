@@ -1,16 +1,14 @@
 /* CATAGORY STYLING SECTION */
+
 .Catagory_wrapper {
-     margin-top: -325px;
-position: relative;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  place-items: center;
-  justify-content: space-between;
-  gap: 15px;
-  overflow: hidden;
-  /* bottom: -150px; */
-  /* bottom: 50vh; */
+  margin-top: -325px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-around; 
+  gap: 10px;
 }
+
 
 /*
 
@@ -31,10 +29,19 @@ position: relative;
 }
 
 .card {
-  width: 350px;
+  width: 320px;
   height: 350px;
   background-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+@media (min-width:997px ) and ( max-width:1327px) {
+.Catagory_wrapper {
+  gap: 14%;
+  padding: 0 120px;
+}
+.card{
+  margin-bottom: 10px;
+}
 }
 .card img {
   width: 100%;

@@ -11,9 +11,16 @@ import { DataContext } from "../DataProvider/DataProvider";
 import { auth } from "../../utility/firebase";
 function Header() {
   const [{ basket, user }, dispatch] = useContext(DataContext);
+  console.log(basket);
+  
   const totalitem = basket?.reduce((amount, item) => {
     return item.amount + amount;
   }, 0);
+  function signout(){
+   if(user){
+     auth.signOut();
+   }
+  }
   return (
     <section className={styles.fixed}>
       <div className={styles.header_container}>
@@ -36,7 +43,11 @@ function Header() {
                 <p>Ethopian</p>
               </span>
               {/* mobile cart and sccount */}
-              <Link to="# " className={styles.mobile_account}>
+              <Link
+                to={!user && "/auth"}
+                className={styles.mobile_account}
+                onClick={signout}
+              >
                 <MdAccountBox />
               </Link>
               <Link to="/Cart" className={styles.cart}>
@@ -60,7 +71,7 @@ function Header() {
           {/* heaer right*/}
           <div className={styles.header_container_right}>
             {/* language */}
-            <Link className={styles.link}>
+            <Link className={`${styles.link} ${styles.link_1}`}>
               <img src={us} alt="" />
               <select name="" id="">
                 <option value="">EN</option>
@@ -72,7 +83,13 @@ function Header() {
               {user ? (
                 <>
                   <p>Hello {user?.email?.split("@")[0]}</p>
-                  <span style={{fontSize:"16px"}} onClick={()=>auth.signOut()}> sign Out</span>
+                  <span
+                    style={{ fontSize: "16px" }}
+                    onClick={() => auth.signOut()}
+                  >
+                    {" "}
+                    sign Out
+                  </span>
                 </>
               ) : (
                 <>

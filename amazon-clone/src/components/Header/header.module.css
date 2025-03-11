@@ -5,7 +5,7 @@
   align-content: center;
   display: block;
 }
-.fixed{
+.fixed {
   position: sticky;
   top: 0;
   z-index: 20;
@@ -26,8 +26,6 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 25px;
-  /* gap: 10px; */
-  /* display: none; */
 }
 
 .header_deliver {
@@ -52,15 +50,13 @@
 .header_container_center {
   padding: 2px 5px;
   background-color: #131921;
-  /* display: none; */
 }
 .header_container_border {
   width: 100%;
   display: flex;
   height: 35px;
-  /* height: 45px; */
   border: solid #131921 1px;
-  border-radius: 8px;
+  border-radius: 4px;
   overflow: hidden;
   align-items: center;
   justify-content: space-between;
@@ -71,6 +67,10 @@
   height: 100%;
   font-weight: bold;
   outline: 1px solid white;
+}
+
+.header_container_right a {
+  padding-left: 5px;
 }
 
 .header_container_center input {
@@ -98,8 +98,9 @@
   width: 35px;
 }
 .header_container_border:focus-within {
-  border: 2px solid rgb(250, 223, 70);
+  border: 2px solid #febd69;
 }
+
 
 .header_container_center select {
   border: none;
@@ -109,7 +110,7 @@
   background-color: #131921;
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 0px;
   justify-content: center;
   padding: 0 7%;
   color: white;
@@ -140,7 +141,9 @@
   display: none;
 }
 /* meadia quarie  */
+.header_container_right .link {
 
+}
 @media (min-width: 635px) {
   .header_container a:hover,
   .header_deliver:hover,
@@ -152,11 +155,9 @@
     overflow: hidden;
   }
   .inner_header {
-    /* min-width: 800px; */
     height: 62px;
     display: flex;
     align-items: center;
-    /* justify-content: space-between; */
     background-color: #131921;
   }
   .mobile_account,
@@ -176,7 +177,7 @@
     width: 100%;
   }
   .header_deliver {
-    margin-left: 10px;
+    margin-left: 5px;
     width: 105px;
   }
   .header_deliver p,
@@ -185,11 +186,14 @@
     line-height: 15px;
     font-weight: 700;
   }
+    .header_container_right .link:nth-child(1) {
+    width: 55px;
+  }
   .header_container_right .link:nth-child(2) {
-    width: 115px;
+    width: 110px;
   }
   .header_container_right .link:nth-child(3) {
-    width: 67px;
+    width: 71px;
   }
   .header_container_border {
     width: 100%;
@@ -197,7 +201,7 @@
     height: 35px;
     /* height: 45px; */
     border: solid #131921 1px;
-    border-radius: 8px;
+    border-radius: 4px;
     overflow: hidden;
     align-items: center;
     justify-content: space-between;

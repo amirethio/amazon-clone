@@ -24,4 +24,3 @@ function Routing() {
 
 export default Routing;
 
-// why we uses <Router> </Router> instead of browserRouter ?
