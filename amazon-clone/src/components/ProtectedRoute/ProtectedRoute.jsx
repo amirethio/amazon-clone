@@ -5,7 +5,9 @@ import { DataContext } from '../DataProvider/DataProvider'
 
 function ProtectedRoute({ children ,msg  ,redirect}) {
   const navigate = useNavigate();
-  const [{ user }, dispatch] = useContext(DataContext);
+  const [{ basket, user }, dispatch] = useContext(DataContext);
+  console.log(user);
+  
   useEffect(() => {
 if(!user){
     navigate("/auth", { state: { msg, redirect } });

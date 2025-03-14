@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import styles from "./auth.module.css";
 import { auth } from "../../utility/firebase";
 import { useContext, useState } from "react";
@@ -18,7 +18,8 @@ function Auth() {
     signin: false,
     signup: false,
   });
-  const navigte = useNavigate();
+  const navigate = useNavigate();
+  const navStateData = useLocation();
   // console.log(email, password);
   const authHandler = (e) => {
     e.preventDefault();
@@ -32,7 +33,7 @@ function Auth() {
             user: userInfo.user,
           });
           setloading({ signin: false, signup: false });
-          navigte("/");
+          navigate(navStateData?.state?.redirect || "/");
         })
         .catch((err) => {
           setError(err.message);
@@ -48,7 +49,7 @@ function Auth() {
             user: userInfo.user,
           });
           setloading({ signin: false, signup: false });
-          navigte("/");
+         navigate(navStateData?.state?.redirect || "/");
         })
         .catch((err) => {
           setError(err.message);
