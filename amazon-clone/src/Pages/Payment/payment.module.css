@@ -45,3 +45,10 @@
 .payment_detail button:hover {
   background-color: var(--primery-shade);
 }
+.loading {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}

@@ -11,7 +11,7 @@ import { DataContext } from "../DataProvider/DataProvider";
 import { auth } from "../../utility/firebase";
 function Header() {
   const [{ basket, user }, dispatch] = useContext(DataContext);
-  console.log(basket);
+
   
   const totalitem = basket?.reduce((amount, item) => {
     return item.amount + amount;

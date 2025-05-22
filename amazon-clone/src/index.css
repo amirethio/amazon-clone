@@ -1,11 +1,10 @@
-*{
+* {
   padding: 0;
   margin: 0;
-   box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 :root {
-  --primery-color:#febd69;
-  --primery-shade:#d49644;
-
+  --primery-color: #febd69;
+  --primery-shade: #d49644;
 }

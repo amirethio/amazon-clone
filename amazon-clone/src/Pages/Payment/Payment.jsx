@@ -75,7 +75,7 @@ function Payment() {
       );
 
       // Step 4: Clear basket
-      dispatch({ type: type.EMPTY_BASKET });
+     dispatch({ type: type.EMPITY_BASKET });
 
       setProcessing(false);
       navigate("/Orders", {

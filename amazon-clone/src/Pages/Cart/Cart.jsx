@@ -68,7 +68,7 @@ item
               <input type="checkbox" name="" id="" />
               <small>This order contains agift</small>
             </span>
-            <Link to="/payment"> continue to checkout</Link>
+            <Link to="/payment" className={styles.checkout}> continue to checkout</Link>
           </div>
         )}
       </section>

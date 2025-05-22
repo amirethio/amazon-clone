@@ -40,7 +40,7 @@
   text-align: center;
   width: 100%;
   border: none;
-  background-color: var(--primary-color);
+  background-color: #febd69;
   border-radius: 5px;
   padding: 5px 10px;
   text-decoration: none;
@@ -85,4 +85,7 @@
   .cart_container {
     width: 74%;
   }
+}
+.checkout {
+  background-color: #febd69;
 }

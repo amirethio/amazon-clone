@@ -18,7 +18,7 @@ function ProductDetail() {
         setLoader(false);
       })
       .catch((err) => {
-        console.log(err);
+        // console.log(err);
         setLoader(false);
       });
   }, []);

@@ -1,8 +1,8 @@
 import numeral from 'numeral'
 
 function CurrencyFormat({children}) {
-  const formmatd = numeral(children).format("$0,0.00");
-  return formmatd
+  const formatted = numeral(children).format("$0,0.00");
+  return formatted;
 }
 
 export default CurrencyFormat
