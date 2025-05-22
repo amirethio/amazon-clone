@@ -3,7 +3,7 @@ import LayOut from "../../components/LayOut/LayOut";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ProductCard from "../../components/Product/ProductCard";
-import styles from "./../../components/Product/Product.module.css";
+import styles from "./../../components/Product/ProductCard";
 import baseUrl from "../../Api/baseUrl";
 import Loader from "../../components/Loader/Loader";
 function Results() {
